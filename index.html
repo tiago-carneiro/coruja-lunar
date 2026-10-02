@@ -11,12 +11,12 @@
             theme: {
                 extend: {
                     colors: {
-                        moonNight: '#070b19',
-                        moonSurface: '#0f172a',
-                        moonCard: '#131c31',
-                        lunarGold: '#e2b764',
-                        lunarPurple: '#581c87',
-                        lunarLavender: '#a78bfa',
+                        moonNight: '#021014',     /* Fundo verde-escuro extraído da imagem */
+                        moonSurface: '#062026',   /* Superfícies e menus */
+                        moonCard: '#092a30',      /* Cards com o tom exato */
+                        lunarGold: '#00ffcc',     /* Brilho ciano/esmeralda da coruja */
+                        lunarPurple: '#0f766e',   /* Suporte esmeralda profundo */
+                        lunarLavender: '#5eead4', /* Variação ciano clara para destaques */
                     }
                 }
             }
@@ -29,18 +29,18 @@
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: #070b19;
+            background-color: #021014;
             color: #e2e8f0;
         }
         h1, h2, h3, .font-mistic {
             font-family: 'Cormorant Garamond', serif;
         }
-        /* Efeito de brilho estelar suave no fundo */
+        /* Efeito de brilho estelar suave adaptado ao tom da imagem */
         .starry-bg {
-            background-image: radial-gradient(white 1px, transparent 0);
+            background-image: radial-gradient(rgba(0, 255, 204, 0.15) 1px, transparent 0);
             background-size: 40px 40px;
             background-position: -19px -19px;
-            opacity: 0.15;
+            opacity: 0.3;
         }
     </style>
 </head>
@@ -50,11 +50,13 @@
     <div class="absolute inset-0 starry-bg pointer-events-none fixed"></div>
 
     <!-- CABEÇALHO / MENU FLUTUANTE MÍSTICO -->
-    <header class="fixed top-0 left-0 w-full z-50 bg-moonNight/80 backdrop-blur-md border-b border-lunarGold/10">
+    <header class="fixed top-0 left-0 w-full z-50 bg-moonNight/90 backdrop-blur-md border-b border-lunarGold/20">
         <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
             <!-- Logo Customizada -->
-            <a href="#inicio" class="flex items-center space-x-2 group">
-                <span class="text-3xl">🦉🌙</span>
+            <a href="#inicio" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-full border border-lunarGold overflow-hidden flex items-center justify-center shadow-[0_0_10px_rgba(0,255,204,0.4)]">
+                    <img src="AC8947F6-060E-4658-951F-837F79CE151E.png" alt="Coruja Lunar" class="w-full h-full object-cover">
+                </div>
                 <span class="text-2xl font-bold font-mistic tracking-wider text-lunarGold group-hover:text-lunarLavender transition-colors">Coruja Lunar</span>
             </a>
 
@@ -69,7 +71,7 @@
 
             <!-- Botão WhatsApp CTA -->
             <div class="hidden md:block">
-                <a href="https://wa.me/message/BK7RMFIFBBC4M1" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-lunarGold to-amber-600 hover:from-amber-500 hover:to-lunarGold text-moonNight font-bold px-6 py-2.5 rounded-full shadow-lg shadow-lunarGold/10 transition-all transform hover:scale-105 text-sm flex items-center space-x-2">
+                <a href="https://wa.me/message/BK7RMFIFBBC4M1" target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 py-2.5 rounded-full shadow-[0_0_15px_rgba(16,185,129,0.4)] transition-all transform hover:scale-105 text-sm flex items-center space-x-2">
                     <i class="fab fa-whatsapp text-lg"></i>
                     <span>Agendar Consulta</span>
                 </a>
@@ -89,7 +91,7 @@
             <a href="#astrologia" class="block py-1 hover:text-lunarGold transition-colors mobile-link">Astrologia</a>
             <a href="#loja" class="block py-1 hover:text-lunarGold transition-colors mobile-link">Loja Shopee</a>
             <div class="pt-2">
-                <a href="https://wa.me/message/BK7RMFIFBBC4M1" target="_blank" rel="noopener noreferrer" class="w-full bg-lunarGold text-moonNight font-bold px-4 py-3 rounded-full flex items-center justify-center space-x-2 font-sans text-sm">
+                <a href="https://wa.me/message/BK7RMFIFBBC4M1" target="_blank" rel="noopener noreferrer" class="w-full bg-emerald-600 text-white font-bold px-4 py-3 rounded-full flex items-center justify-center space-x-2 font-sans text-sm">
                     <i class="fab fa-whatsapp text-lg"></i>
                     <span>Agendar Consulta</span>
                 </a>
@@ -101,7 +103,7 @@
     <section id="inicio" class="relative pt-32 pb-24 md:pt-44 md:px-6 overflow-hidden">
         <div class="max-w-5xl mx-auto px-6 text-center space-y-8 relative z-10">
             
-            <div class="inline-flex items-center space-x-2 bg-purple-950/60 border border-lunarLavender/30 px-4 py-1.5 rounded-full text-lunarLavender text-xs tracking-widest uppercase">
+            <div class="inline-flex items-center space-x-2 bg-emerald-950/60 border border-lunarLavender/30 px-4 py-1.5 rounded-full text-lunarLavender text-xs tracking-widest uppercase shadow-[0_0_15px_rgba(0,255,204,0.15)]">
                 <span>✨ Tarólogo e Artesão Esotérico</span>
             </div>
 
@@ -114,7 +116,7 @@
             </p>
 
             <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="https://wa.me/message/BK7RMFIFBBC4M1" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-8 py-4 rounded-full shadow-lg shadow-emerald-900/30 transition-all transform hover:-translate-y-0.5 flex items-center justify-center space-x-3 text-base">
+                <a href="https://wa.me/message/BK7RMFIFBBC4M1" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-8 py-4 rounded-full shadow-[0_0_20px_rgba(16,185,129,0.4)] transition-all transform hover:-translate-y-0.5 flex items-center justify-center space-x-3 text-base">
                     <i class="fab fa-whatsapp text-2xl"></i>
                     <span>PARA AGENDAR: CLIQUE EM WHATSAPP</span>
                 </a>
@@ -122,16 +124,16 @@
 
             <!-- Elemento Decorativo Central -->
             <div class="pt-12 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto text-slate-400 text-sm">
-                <div class="bg-moonCard/50 border border-lunarGold/10 p-4 rounded-xl">
+                <div class="bg-moonCard/80 border border-lunarGold/20 p-4 rounded-xl backdrop-blur-sm">
                     <span class="text-2xl block mb-1">🔮</span> Tarot Intuitivo
                 </div>
-                <div class="bg-moonCard/50 border border-lunarGold/10 p-4 rounded-xl">
+                <div class="bg-moonCard/80 border border-lunarGold/20 p-4 rounded-xl backdrop-blur-sm">
                     <span class="text-2xl block mb-1">🕯️</span> Velas & Arte
                 </div>
-                <div class="bg-moonCard/50 border border-lunarGold/10 p-4 rounded-xl">
+                <div class="bg-moonCard/80 border border-lunarGold/20 p-4 rounded-xl backdrop-blur-sm">
                     <span class="text-2xl block mb-1">🪐</span> Mapa Astral
                 </div>
-                <div class="bg-moonCard/50 border border-lunarGold/10 p-4 rounded-xl">
+                <div class="bg-moonCard/80 border border-lunarGold/20 p-4 rounded-xl backdrop-blur-sm">
                     <span class="text-2xl block mb-1">🐾</span> Família Lunar
                 </div>
             </div>
@@ -140,7 +142,7 @@
     </section>
 
     <!-- SEÇÃO SOBRE O ORÁCULO E ARTESÃO -->
-    <section id="sobre" class="py-24 bg-moonSurface/60 border-t border-b border-lunarGold/10 relative z-10">
+    <section id="sobre" class="py-24 bg-moonSurface/60 border-t border-b border-lunarGold/20 relative z-10">
         <div class="max-w-4xl mx-auto px-6 text-center space-y-6">
             <h2 class="text-3xl sm:text-5xl font-bold font-mistic text-lunarGold">A Sabedoria sob a Luz da Lua</h2>
             <p class="text-slate-300 text-base sm:text-lg leading-relaxed font-light">
@@ -159,7 +161,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <!-- Card Tarot -->
             <div class="bg-moonCard border border-lunarGold/20 rounded-3xl p-8 sm:p-10 shadow-xl relative overflow-hidden group hover:border-lunarGold transition-all">
-                <div class="absolute top-0 right-0 w-32 h-32 bg-lunarPurple/10 rounded-full blur-2xl group-hover:bg-lunarPurple/20 transition-all"></div>
+                <div class="absolute top-0 right-0 w-32 h-32 bg-lunarGold/10 rounded-full blur-2xl group-hover:bg-lunarGold/20 transition-all"></div>
                 <div class="text-4xl mb-6">🔮🃏</div>
                 <h3 class="text-2xl font-bold font-mistic text-lunarGold mb-3">Leitura do Tarot</h3>
                 <p class="text-slate-300 text-sm sm:text-base leading-relaxed font-light mb-6">
@@ -188,7 +190,7 @@
     </section>
 
     <!-- SEÇÃO ASTROLOGIA -->
-    <section id="astrologia" class="py-24 bg-gradient-to-b from-moonNight via-moonSurface to-moonNight border-t border-b border-lunarGold/10 relative z-10 text-center">
+    <section id="astrologia" class="py-24 bg-gradient-to-b from-moonNight via-moonSurface to-moonNight border-t border-b border-lunarGold/20 relative z-10 text-center">
         <div class="max-w-3xl mx-auto px-6 space-y-6">
             <div class="text-4xl">✨🪐🌌</div>
             <h2 class="text-3xl sm:text-5xl font-bold font-mistic text-lunarGold">Jornada Astrológica</h2>
@@ -238,7 +240,7 @@
     </section>
 
     <!-- RODAPÉ -->
-    <footer class="bg-moonSurface border-t border-lunarGold/10 py-12 text-center text-xs text-slate-500 relative z-10">
+    <footer class="bg-moonSurface border-t border-lunarGold/20 py-12 text-center text-xs text-slate-500 relative z-10">
         <div class="max-w-6xl mx-auto px-6 space-y-3">
             <p class="font-mistic text-lunarGold text-xl">Coruja Lunar — Tarólogo e Artesão</p>
             <p>&copy; 2026 Coruja Lunar. Todos os direitos reservados sob a luz dos astros.</p>
