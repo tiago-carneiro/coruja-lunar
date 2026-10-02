@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coruja Lunar | Tarólogo e Artesão</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        moonNight: '#070b19',
+                        moonSurface: '#0f172a',
+                        moonCard: '#131c31',
+                        lunarGold: '#e2b764',
+                        lunarPurple: '#581c87',
+                        lunarLavender: '#a78bfa',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Cormorant Garamond (Místico/Editorial) e Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #070b19;
+            color: #e2e8f0;
+        }
+        h1, h2, h3, .font-mistic {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        /* Efeito de brilho estelar suave no fundo */
+        .starry-bg {
+            background-image: radial-gradient(white 1px, transparent 0);
+            background-size: 40px 40px;
+            background-position: -19px -19px;
+            opacity: 0.15;
+        }
+    </style>
+</head>
+<body class="bg-moonNight text-slate-100 antialiased selection:bg-lunarGold selection:text-black relative">
+
+    <!-- Fundo Estelar Discreto -->
+    <div class="absolute inset-0 starry-bg pointer-events-none fixed"></div>
+
+    <!-- CABEÇALHO / MENU FLUTUANTE MÍSTICO -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-moonNight/80 backdrop-blur-md border-b border-lunarGold/10">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Logo Customizada -->
+            <a href="#inicio" class="flex items-center space-x-2 group">
+                <span class="text-3xl">🦉🌙</span>
+                <span class="text-2xl font-bold font-mistic tracking-wider text-lunarGold group-hover:text-lunarLavender transition-colors">Coruja Lunar</span>
+            </a>
+
+            <!-- Menu Desktop -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm tracking-wide font-medium">
+                <a href="#inicio" class="hover:text-lunarGold transition-colors">Início</a>
+                <a href="#sobre" class="hover:text-lunarGold transition-colors">O Oráculo</a>
+                <a href="#servicos" class="hover:text-lunarGold transition-colors">Serviços & Arte</a>
+                <a href="#astrologia" class="hover:text-lunarGold transition-colors">Astrologia</a>
+                <a href="#loja" class="hover:text-lunarGold transition-colors">Loja Shopee</a>
+            </nav>
+
+            <!-- Botão WhatsApp CTA -->
+            <div class="hidden md:block">
+                <a href="https://wa.me/message/BK7RMFIFBBC4M1" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-lunarGold to-amber-600 hover:from-amber-500 hover:to-lunarGold text-moonNight font-bold px-6 py-2.5 rounded-full shadow-lg shadow-lunarGold/10 transition-all transform hover:scale-105 text-sm flex items-center space-x-2">
+                    <i class="fab fa-whatsapp text-lg"></i>
+                    <span>Agendar Consulta</span>
+                </a>
+            </div>
+
+            <!-- Botão Menu Mobile -->
+            <button id="menu-btn" class="md:hidden text-lunarGold text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Menu Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-moonSurface border-b border-lunarGold/20 px-6 py-4 space-y-3 font-mistic text-lg">
+            <a href="#inicio" class="block py-1 hover:text-lunarGold transition-colors mobile-link">Início</a>
+            <a href="#sobre" class="block py-1 hover:text-lunarGold transition-colors mobile-link">O Oráculo</a>
+            <a href="#servicos" class="block py-1 hover:text-lunarGold transition-colors mobile-link">Serviços & Arte</a>
+            <a href="#astrologia" class="block py-1 hover:text-lunarGold transition-colors mobile-link">Astrologia</a>
+            <a href="#loja" class="block py-1 hover:text-lunarGold transition-colors mobile-link">Loja Shopee</a>
+            <div class="pt-2">
+                <a href="https://wa.me/message/BK7RMFIFBBC4M1" target="_blank" rel="noopener noreferrer" class="w-full bg-lunarGold text-moonNight font-bold px-4 py-3 rounded-full flex items-center justify-center space-x-2 font-sans text-sm">
+                    <i class="fab fa-whatsapp text-lg"></i>
+                    <span>Agendar Consulta</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- SEÇÃO HERO (BOAS-VINDAS MÍSTICAS) -->
+    <section id="inicio" class="relative pt-32 pb-24 md:pt-44 md:px-6 overflow-hidden">
+        <div class="max-w-5xl mx-auto px-6 text-center space-y-8 relative z-10">
+            
+            <div class="inline-flex items-center space-x-2 bg-purple-950/60 border border-lunarLavender/30 px-4 py-1.5 rounded-full text-lunarLavender text-xs tracking-widest uppercase">
+                <span>✨ Tarólogo e Artesão Esotérico</span>
+            </div>
+
+            <h1 class="text-5xl sm:text-7xl font-bold font-mistic text-slate-100 tracking-wide leading-tight">
+                Coruja <span class="text-lunarGold italic">Lunar</span>
+            </h1>
+
+            <p class="text-lg sm:text-xl text-slate-300 font-light max-w-2xl mx-auto leading-relaxed">
+                Utilizando os oráculos e a astrologia como ferramentas profundas de autoconhecimento, orientação e expansão da consciência.
+            </p>
+
+            <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://wa.me/message/BK7RMFIFBBC4M1" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-8 py-4 rounded-full shadow-lg shadow-emerald-900/30 transition-all transform hover:-translate-y-0.5 flex items-center justify-center space-x-3 text-base">
+                    <i class="fab fa-whatsapp text-2xl"></i>
+                    <span>PARA AGENDAR: CLIQUE EM WHATSAPP</span>
+                </a>
+            </div>
+
+            <!-- Elemento Decorativo Central -->
+            <div class="pt-12 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto text-slate-400 text-sm">
+                <div class="bg-moonCard/50 border border-lunarGold/10 p-4 rounded-xl">
+                    <span class="text-2xl block mb-1">🔮</span> Tarot Intuitivo
+                </div>
+                <div class="bg-moonCard/50 border border-lunarGold/10 p-4 rounded-xl">
+                    <span class="text-2xl block mb-1">🕯️</span> Velas & Arte
+                </div>
+                <div class="bg-moonCard/50 border border-lunarGold/10 p-4 rounded-xl">
+                    <span class="text-2xl block mb-1">🪐</span> Mapa Astral
+                </div>
+                <div class="bg-moonCard/50 border border-lunarGold/10 p-4 rounded-xl">
+                    <span class="text-2xl block mb-1">🐾</span> Família Lunar
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SEÇÃO SOBRE O ORÁCULO E ARTESÃO -->
+    <section id="sobre" class="py-24 bg-moonSurface/60 border-t border-b border-lunarGold/10 relative z-10">
+        <div class="max-w-4xl mx-auto px-6 text-center space-y-6">
+            <h2 class="text-3xl sm:text-5xl font-bold font-mistic text-lunarGold">A Sabedoria sob a Luz da Lua</h2>
+            <p class="text-slate-300 text-base sm:text-lg leading-relaxed font-light">
+                O trabalho do <strong class="text-lunarGold font-normal">Coruja Lunar</strong> une a sensibilidade dos oráculos à alquimia do artesanato esotérico. Cada atendimento com o Tarot é um portal para desvendar tendências, compreender bloqueios e iluminar decisões. Paralelamente, a criação de velas e arte esotérica traz para o plano físico a vibração necessária para rituais de harmonização e proteção do seu espaço sagrado.
+            </p>
+        </div>
+    </section>
+
+    <!-- SEÇÃO SERVIÇOS / ORÁCULOS E ARTE -->
+    <section id="servicos" class="py-24 max-w-6xl mx-auto px-6 relative z-10">
+        <div class="text-center space-y-3 mb-16">
+            <span class="text-lunarLavender text-xs tracking-widest uppercase font-semibold">Portais de Conexão</span>
+            <h2 class="text-3xl sm:text-5xl font-bold font-mistic text-slate-100">Oráculos, Velas e Arte Esotérica</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Card Tarot -->
+            <div class="bg-moonCard border border-lunarGold/20 rounded-3xl p-8 sm:p-10 shadow-xl relative overflow-hidden group hover:border-lunarGold transition-all">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-lunarPurple/10 rounded-full blur-2xl group-hover:bg-lunarPurple/20 transition-all"></div>
+                <div class="text-4xl mb-6">🔮🃏</div>
+                <h3 class="text-2xl font-bold font-mistic text-lunarGold mb-3">Leitura do Tarot</h3>
+                <p class="text-slate-300 text-sm sm:text-base leading-relaxed font-light mb-6">
+                    Orientação sincera e profunda através das cartas. Responda a questionamentos sobre amor, carreira, caminhos espirituais e autoconhecimento com clareza e respeito ao seu livre-arbítrio.
+                </p>
+                <a href="https://wa.me/message/BK7RMFIFBBC4M1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-lunarLavender hover:text-lunarGold font-medium text-sm transition-colors">
+                    <span>Agendar leitura pelo WhatsApp</span>
+                    <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                </a>
+            </div>
+
+            <!-- Card Velas e Arte -->
+            <div class="bg-moonCard border border-lunarGold/20 rounded-3xl p-8 sm:p-10 shadow-xl relative overflow-hidden group hover:border-lunarGold transition-all">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-amber-600/10 rounded-full blur-2xl group-hover:bg-amber-600/20 transition-all"></div>
+                <div class="text-4xl mb-6">🕯️✨</div>
+                <h3 class="text-2xl font-bold font-mistic text-lunarGold mb-3">Velas e Arte Esotérica</h3>
+                <p class="text-slate-300 text-sm sm:text-base leading-relaxed font-light mb-6">
+                    Artigos artesanais criados com intenção e magia prática. Peças exclusivas de decoração e velas ritualísticas para elevar a frequência energética do seu lar ou altar.
+                </p>
+                <a href="https://shopee.com.br/corujalunar?smtt=0.556455263-1654274506.9" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-lunarLavender hover:text-lunarGold font-medium text-sm transition-colors">
+                    <span>Explorar produtos na Loja Virtual</span>
+                    <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO ASTROLOGIA -->
+    <section id="astrologia" class="py-24 bg-gradient-to-b from-moonNight via-moonSurface to-moonNight border-t border-b border-lunarGold/10 relative z-10 text-center">
+        <div class="max-w-3xl mx-auto px-6 space-y-6">
+            <div class="text-4xl">✨🪐🌌</div>
+            <h2 class="text-3xl sm:text-5xl font-bold font-mistic text-lunarGold">Jornada Astrológica</h2>
+            <p class="text-slate-300 text-base sm:text-lg leading-relaxed font-light">
+                Conhecimento básico em astrologia, em processo de aperfeiçoamento. Estudando signos, planetas, casas e mapa astral, utilizando a astrologia como ferramenta de autoconhecimento.
+            </p>
+        </div>
+    </section>
+
+    <!-- SEÇÃO LOJA VIRTUAL E FAMÍLIA LUNAR (REDES) -->
+    <section id="loja" class="py-24 max-w-5xl mx-auto px-6 relative z-10">
+        <div class="text-center space-y-3 mb-16">
+            <h2 class="text-3xl sm:text-5xl font-bold font-mistic text-slate-100">Redes e Lojas Oficiais</h2>
+            <p class="text-slate-400 text-sm">Acompanhe nosso universo mágico em diferentes plataformas.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <!-- Shopee -->
+            <a href="https://shopee.com.br/corujalunar?smtt=0.556455263-1654274506.9" target="_blank" rel="noopener noreferrer" class="bg-moonCard border border-lunarGold/20 p-8 rounded-3xl text-center space-y-4 hover:border-orange-400 transition-all group">
+                <div class="w-14 h-14 bg-orange-500/10 text-orange-400 rounded-2xl flex items-center justify-center mx-auto text-2xl group-hover:bg-orange-500 group-hover:text-white transition-all">
+                    <i class="fas fa-store"></i>
+                </div>
+                <h3 class="font-bold font-mistic text-xl text-lunarGold">Loja Virtual</h3>
+                <p class="text-xs text-slate-400">Compre velas e artes na Shopee</p>
+            </a>
+
+            <!-- Instagram Principal -->
+            <a href="https://www.instagram.com/corujalunar?igsh=ZzZwNjM2cXcwenlu" target="_blank" rel="noopener noreferrer" class="bg-moonCard border border-lunarGold/20 p-8 rounded-3xl text-center space-y-4 hover:border-pink-500 transition-all group">
+                <div class="w-14 h-14 bg-pink-500/10 text-pink-400 rounded-2xl flex items-center justify-center mx-auto text-2xl group-hover:bg-pink-500 group-hover:text-white transition-all">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <h3 class="font-bold font-mistic text-xl text-lunarGold">Instagram Principal</h3>
+                <p class="text-xs text-slate-400">@corujalunar</p>
+            </a>
+
+            <!-- Instagram Pantera e Família -->
+            <a href="https://www.instagram.com/pantera_e_sua_familia_lunar" target="_blank" rel="noopener noreferrer" class="bg-moonCard border border-lunarGold/20 p-8 rounded-3xl text-center space-y-4 hover:border-purple-400 transition-all group">
+                <div class="w-14 h-14 bg-purple-500/10 text-purple-400 rounded-2xl flex items-center justify-center mx-auto text-2xl group-hover:bg-purple-500 group-hover:text-white transition-all">
+                    <i class="fas fa-paw"></i>
+                </div>
+                <h3 class="font-bold font-mistic text-xl text-lunarGold">Família Lunar</h3>
+                <p class="text-xs text-slate-400">@pantera_e_sua_familia_lunar</p>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="bg-moonSurface border-t border-lunarGold/10 py-12 text-center text-xs text-slate-500 relative z-10">
+        <div class="max-w-6xl mx-auto px-6 space-y-3">
+            <p class="font-mistic text-lunarGold text-xl">Coruja Lunar — Tarólogo e Artesão</p>
+            <p>&copy; 2026 Coruja Lunar. Todos os direitos reservados sob a luz dos astros.</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT MOBILE MENU -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
